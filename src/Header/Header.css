@@ -1,0 +1,65 @@
+
+.header-grid {
+    display: grid;
+    grid-template-areas:
+    "logo score"
+    "kind kind";
+    grid-template-columns: 1fr 1fr ;
+    
+   
+}
+
+.grid-logo {
+    background-image: url(https://birds-quiz.netlify.app/static/media/logo.4f82cd73.svg);;
+    grid-area: logo;
+    width: 200px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.grid-score {
+    grid-area: score;   
+    position: relative;
+}
+
+.score {
+    font: bold 1.5em sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+
+}
+
+.grid-kinds {
+    grid-area: kind;
+   
+    
+    
+}    
+
+.kinds {
+    list-style-type: none;
+    padding: 0;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    background: rgb(82, 145, 82);
+    border-radius: 5px;
+    
+    
+    
+    
+    
+}
+
+.kinds li {
+    font: 1rem sans-serif;
+    text-align: center;   
+    padding: 7px 0;
+    
+}
+
+.current {
+    background: rgba(83, 89, 167, 0.5);
+}

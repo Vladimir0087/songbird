@@ -1,0 +1,37 @@
+.question {
+    background: grey;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    
+}
+
+.stars {
+    font: bold 1.5em sans-serif;
+    margin-top: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    
+}
+
+.bird {
+    padding: 0;
+    margin: 15px;
+
+}
+
+
+.stars-player {
+    margin: 15px;
+    
+}
+
+.player {
+    padding-top: 20px;
+}
+
+.bird-image {
+    width: 200px;
+    height: 155px;
+}
