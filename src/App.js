@@ -57,8 +57,6 @@ export default class App extends Component {
       picture: "https://birds-quiz.netlify.app/static/media/bird.06a46938.jpg"
       }));
     }
-
-
   }
 
 changeheadname() {
@@ -70,9 +68,7 @@ changeheadname() {
 }
 
   score (scor) {
-    
     this.setState(state=>({
-      
       score: state.score - scor +5
       }))
       this.addscore= 5-scor
