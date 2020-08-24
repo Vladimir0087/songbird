@@ -25,6 +25,8 @@ export default class App extends Component {
     this.nextButton = this.nextButton.bind(this);
     this.changeheadname = this.changeheadname.bind(this);
     this.final= this.final.bind(this);
+    this.addscore=0;
+    this.consol=[];
   }
 
   randomInteger(min, max) {
@@ -33,6 +35,9 @@ export default class App extends Component {
   }
 
   nextButton () {
+    
+    this.consol.push([this.state.i+1 + " вопрос : " + this.addscore+" баллов"]);
+    console.log([this.state.i+1 + " вопрос : " + this.addscore+" баллов"]);
     if (this.state.i===5) {
       document.querySelector(".wrapp1").style.display = "";
       document.querySelector(".wrapp0").style.display = "none";
@@ -40,6 +45,9 @@ export default class App extends Component {
         document.querySelector("button").innerHTML="ИГРА ЗАКОНЧЕНА";
         document.querySelector(".finalscore1").innerHTML="Поздравляем! ВЫ ЧЕМПИОН!";
       }
+      console.log(this.consol);
+      
+
     } else {
     this.setState(state=>({
       i: state.i + 1,
@@ -49,6 +57,8 @@ export default class App extends Component {
       picture: "https://birds-quiz.netlify.app/static/media/bird.06a46938.jpg"
       }));
     }
+
+
   }
 
 changeheadname() {
@@ -62,9 +72,10 @@ changeheadname() {
   score (scor) {
     
     this.setState(state=>({
+      
       score: state.score - scor +5
       }))
-   
+      this.addscore= 5-scor
   }
 
 componentDidMount () {
